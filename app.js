@@ -1,4 +1,5 @@
-var app = require('koa')()
+require('./store').init()
+  var app = require('koa')()
   , logger = require('koa-logger')
   , json = require('koa-json')
   , views = require('koa-views')
@@ -39,4 +40,4 @@ app.on('error', (err, ctx) => {
 
 module.exports = app;
 
-require('./store').init()
+
